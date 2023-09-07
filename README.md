@@ -16,8 +16,6 @@ In our research, we leveraged the Python API for SegmentAnything and evaluated t
 ![challenge](https://github.com/XiaodanXing/SAM4organoid/assets/30890745/16c1eeef-d174-4a1f-b8a2-79b48db282d5)
 
 
-**Figure 1:** Challenges in directly applying SegmentAnything in real-world organoid morphology analysis workflow.
-
 The challenges we faced included:
 
 1. SegmentAnything occasionally misidentified the background as an object, resulting in non-zero indices for the background in the masks.
@@ -40,5 +38,7 @@ We conducted a comprehensive analysis of each organoid, computing five distinct 
 
 4. **Non-smoothness**: Reflects the local variation in radius lengths along the organoid boundary. A higher non-smoothness value indicates a more irregular and less smooth boundary. To compute this property, we fitted an ellipse to the organoid’s boundary and determined the smoothness as the ratio of perimeters between the fitted ellipse and the original contour.
 
-5. **Non-circularity**: We employed the following equation to evaluate the extent to which the organoid resembles a perfect circle:
+5. **Non-circularity**: We employed the following equation to evaluate the extent to which the organoid resembles a perfect circle: $$
+\text{Non-circularity} = \left| \frac{{\text{Perimeter}^2}}{{4\pi \times \text{Area}}} - 1 \right|
+$$
 
