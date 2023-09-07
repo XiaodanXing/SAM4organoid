@@ -38,7 +38,5 @@ We conducted a comprehensive analysis of each organoid, computing five distinct 
 
 4. **Non-smoothness**: Reflects the local variation in radius lengths along the organoid boundary. A higher non-smoothness value indicates a more irregular and less smooth boundary. To compute this property, we fitted an ellipse to the organoid’s boundary and determined the smoothness as the ratio of perimeters between the fitted ellipse and the original contour.
 
-5. **Non-circularity**: We employed the following equation to evaluate the extent to which the organoid resembles a perfect circle: $$
-\text{Non-circularity} = \left| \frac{{\text{Perimeter}^2}}{{4\pi \times \text{Area}}} - 1 \right|
-$$
+5. **Non-circularity**: We employed the following equation to evaluate the extent to which the organoid resembles a perfect circle: $$Non-circularity =|(Perimeter^2)/(4\pi \times Area)-1|$$
 
