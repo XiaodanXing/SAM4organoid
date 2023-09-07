@@ -40,3 +40,9 @@ We conducted a comprehensive analysis of each organoid, computing five distinct 
 
 5. **Non-circularity**: We employed the following equation to evaluate the extent to which the organoid resembles a perfect circle: $$Non-circularity =|(Perimeter^2)/(4\pi \times Area)-1|$$
 
+## Output Interpretation
+
+![1694102430578](https://github.com/XiaodanXing/SAM4organoid/assets/30890745/7b590260-d21e-433e-813d-52be54795a6d)
+The outputs include two files: a CSV file containing all the properties of the segmented organoids and a segmentation file illustrating the segmented organoids. We recommend a careful review and removal of any erroneously segmented regions before computing statistical properties for all organoids in the CSV file. 
+
+It's important to note that all properties were calculated in pixel units, not real-world scale. To transform these properties to real-world units such as nanometers (nm), please refer to your microscopy resolution. In cases where microscopy images are extremely large (>10,000 x 10,000 pixels), we recommend cropping the original image as small patches before utilizing SAM.
