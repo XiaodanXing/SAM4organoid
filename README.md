@@ -42,6 +42,12 @@ We conducted a comprehensive analysis of each organoid, computing five distinct 
 
 ## Output Interpretation
 
+Use command below to process PNG files in batches.
+
+```
+python main.py -i /input/file/path -o /output/file/path
+```
+
 ![1694102430578](https://github.com/XiaodanXing/SAM4organoid/assets/30890745/7b590260-d21e-433e-813d-52be54795a6d)
 The outputs include two files: a CSV file containing all the properties of the segmented organoids and a segmentation file illustrating the segmented organoids. We recommend a careful review and removal of any erroneously segmented regions before computing statistical properties for all organoids in the CSV file. 
 
